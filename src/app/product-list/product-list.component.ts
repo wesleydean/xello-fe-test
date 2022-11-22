@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LocaleService } from '../services/locale.service';
 
 @Component({
   selector: 'app-product-list',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent {
+  locale = 'en-ca';
+  constructor(private localeService: LocaleService) {
+    this.localeService.getLocale().subscribe((res: string) => {
+      this.locale = res;
+    });
+  }
   products = [
     {
       id: 1,
