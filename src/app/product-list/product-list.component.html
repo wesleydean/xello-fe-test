@@ -9,5 +9,17 @@
 
   <p *ngIf="product.description">Description: {{ product.description }}</p>
 
-  <button type="button" (click)="share()">Share</button>
+  <p class="price">
+    {{ product.price }}
+  </p>
+
+  <div class="cta-container">
+    <div class="cta-container--1">
+      <button type="button" (click)="share()">Add to cart</button>
+    </div>
+    <div class="cta-container--2">
+      <button type="button">Favorite</button>
+      <button type="button">Share</button>
+    </div>
+  </div>
 </div>
