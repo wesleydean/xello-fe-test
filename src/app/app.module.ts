@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { InMemoryService } from './services/in-memory.service';
 import { LocaleService } from './services/locale.service';
 import { ProductListComponent } from './product-list/product-list.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 @NgModule({
-  declarations: [AppComponent, ProductListComponent],
+  declarations: [AppComponent, ProductListComponent, TopBarComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [LocaleService, InMemoryService],
   bootstrap: [AppComponent],
