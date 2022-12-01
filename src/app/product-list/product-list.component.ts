@@ -9,9 +9,7 @@ import { LocaleService } from '../services/locale.service';
 export class ProductListComponent {
   locale = 'en-ca';
   constructor(private localeService: LocaleService) {
-    this.localeService.getLocale().subscribe((res: string) => {
-      this.locale = res;
-    });
+    //
   }
   products = [
     {
@@ -60,9 +58,3 @@ export class ProductListComponent {
     window.alert('The product has been shared!');
   }
 }
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/

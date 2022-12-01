@@ -20,11 +20,11 @@ Tips:
 - After creating the rating, how would you make the rating reusable?
 - How would you test in this component?
 
-3a. Display the count of favourited courses next to a favorite icon in the top-bar beside the Checkout button.
+3a. Display the count of favourited courses next to the material 'favorite' icon in the top-bar beside the Checkout button.
 
 Tips:
-
-- Use an Angular service that makes a GET request to 'api/favourites'. The in-memory service will automatically intercept the request and return the 'favourites' resource returned from the createDb() helper method.
+- Use [Angular material icons](https://fonts.google.com/icons) the heart material icon within the button. Ie. <i class="material-icons">favorite</i>
+- Use an Angular service that extends makes a GET request to 'api/favourites'. The in-memory service will automatically intercept the request and return the 'favourites' resource returned from the createDb() helper method.
 - Use async pipe in the template to subscribe to and display the rating instead of manual subscribe / unsubscribe
 - Add correct return types/generics
 
@@ -33,10 +33,10 @@ Tips:
 Tips:
 
 - When clicking on the favourite button, populate a list of favorites using an Angular service dedicated to this logic. The service should
-- Using [Angular material icons](https://fonts.google.com/icons) the heart material icon within the button. Ie. <i class="material-icons">favorite</i>
-- The number of favourited items will be displayed in the top bar with the number of courses displayed beside a heart icon (like the checkout button).
+- The number of favourited items will be updated in the top bar from 3a.
 - Create a service that saves a favourite on click, and fetch them via api as well.
 - How would you make this accessible? Ie. role=image, aria-label
+
 - How would you test this for accessibility on desktop/in the browser?
 
 # Angular

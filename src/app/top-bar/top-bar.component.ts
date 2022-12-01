@@ -26,7 +26,6 @@ export class TopBarComponent {
   ];
 
   selectLocale($event: any) {
-    console.log($event.target.value);
     this.localeService.updateLocale($event.target.value);
   }
 }
