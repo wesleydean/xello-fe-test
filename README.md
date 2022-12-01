@@ -25,8 +25,8 @@ Tips:
 
 Tips:
 
-- Use [Angular material icons](https://fonts.google.com/icons) the heart material icon within the button. Ie. <i class="material-icons">favorite</i>
-- Use an Angular service that extends makes a GET request to 'api/favourites'. The in-memory service will automatically intercept the request and return the 'favourites' resource returned from the createDb() helper method.
+- Use [Angular material icons](https://fonts.google.com/icons) the heart material icon. Ie. <i class="material-icons">favorite</i>
+- Use an Angular service that extends makes a GET request to 'api/favourites'. The in-memory service will automatically intercept the request and return the 'favourites' resource returned from the createDb() helper method. (More info on the in-memory-db service if you need it.)[https://blog.logrocket.com/angular-in-memory-web-api-tutorial-mocking-crud-apis-in-angular/]
 - Use async pipe in the template to subscribe to and display the rating instead of manual subscribe / unsubscribe
 - Add correct return types/generics
 
