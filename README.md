@@ -1,6 +1,6 @@
 ## Interview Questions
 
-1a. Display the price of each course on the courses card underneath the description, so that switching the locale dropdown displays the converted price accordingly.
+1a. Display converted price of each course on the courses card underneath the description, so that switching the locale dropdown displays the converted price accordingly.
 
 Tips:
 
