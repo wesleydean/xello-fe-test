@@ -1,14 +1,26 @@
 ## Interview Questions
 
-1. Add the ability for the user to favorite a course.
+1a. Display the price of each course on the courses card underneath the description, so that switching the locale dropdown displays the converted price accordingly.
 
-- Use the heart material icon within the button. Ie. <i class="material-icons">favorite</i>
-- The number of favourited items will be displayed in the top bar with the number of courses displayed beside a heart icon (like the checkout button).
-- Create a service that saves a favourite on click, and fetch them via api as well.
-- How would you make this accessible? Ie. role=image, aria-label
-- How would you test this for accessibility on desktop/in the browser?
+Tips:
 
-2. Create a page to display the list of favourite
+- Use an Angular pipe
+- Get the latest locale from the localeService.
+- Use the following conversion rate: 1 cad = 0.63 £, 1 cad = 0.75 USD;
+- How would you test the pipe?
+
+1b. Any course selling for less than $40 are on sale. Let’s highlight the price with a background of yellow
+
+2. Display a star rating for each course underneath the course description. Use the material favorite for the icons and display a rating out of 5 using the rating for each course. Display the rated stars using the color #dda928, and the unrated stars #e1e1e1. ie. 4/5 would show 4 stars using #dda928.
+
+Tips:
+
+- Use the Array() method to convert the course number into an array for iteration.
+- After creating the rating, how would you make the rating reusable?
+- Can we convert the colors into scss variables?
+- How would you test in this component?
+
+3a. Display the number of favourited courses next to a favourited icon in the top-bar, using an Angular service that calls an api from 'api/favourites'.
 
 - Fetch the list of products from the in-memory api store instead, through the creation of a new service.
 - Use rxjs to load data, but use async pipe instead of manual subscribe / unsubscribe
@@ -16,20 +28,14 @@
 - Add correct return types/generics
 - Use dependency injection to provide the in-memory api store
 
-3. Display the price of the course on the courses card underneath åthe description.
+3b. Add the ability for the user to favorite a course.
 
-- Write a test to validate the course details get displayed correctly
-- Using a pipe, display the price in the appropriate currency based on the locale, using example conversion rate.
-- Any course selling for less than $40 are on sale. Let’s highlight the price with a background of yellow. - Asad Mahmood
-
-4. Make use of a directive
-
-- Use HostBinding
-- Display a star rating for each course using the material favorite icon out of 5 using the rating for each course. Wesley Francis
-- Display the rated stars using the color #dda928, and the remaining stars #e1e1e1.
-  Can you use css variables instead?
-- Try using a component with OnPush change detection
-- What would you test in this component?
+- When clicking on the favourite button, populate a list of favorites using an Angular service dedicated to this logic. The service should
+- Using [Angular material icons](https://fonts.google.com/icons) the heart material icon within the button. Ie. <i class="material-icons">favorite</i>
+- The number of favourited items will be displayed in the top bar with the number of courses displayed beside a heart icon (like the checkout button).
+- Create a service that saves a favourite on click, and fetch them via api as well.
+- How would you make this accessible? Ie. role=image, aria-label
+- How would you test this for accessibility on desktop/in the browser?
 
 # Angular
 
