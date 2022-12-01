@@ -30,7 +30,7 @@ Tips:
 - Use async pipe in the template to subscribe to and display the count instead of manual subscribe / unsubscribe
 - Add correct return types/generics
 
-3b. Add the ability for the user to add a favorite a course when clicking on the Favorite button. This should create a POST request to 'api/services' using the {id: number} model defined in the InMemoryService for the 'favourites' resource.
+3b. Add the ability for the user to add a new favourite course when clicking on the course Favorite button. This should create a POST request to 'api/services' using the {id: number} model (defined in the InMemoryService) for the 'favourites' resource.
 
 Tips:
 
