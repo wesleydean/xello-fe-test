@@ -46,7 +46,7 @@ export class InMemoryService implements InMemoryDbService {
         },
       ],
       locale: 'en-ca',
-      favourites: [],
+      favourites: [{ id: 1 }, { id: 4 }],
     });
   }
 }

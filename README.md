@@ -16,19 +16,21 @@ Tips:
 Tips:
 
 - Use the Array() method to convert the course number into an array for iteration.
+- Convert the colors into scss variables
 - After creating the rating, how would you make the rating reusable?
-- Can we convert the colors into scss variables?
 - How would you test in this component?
 
-3a. Display the number of favourited courses next to a favourited icon in the top-bar, using an Angular service that calls an api from 'api/favourites'.
+3a. Display the count of favourited courses next to a favorite icon in the top-bar beside the Checkout button.
 
-- Fetch the list of products from the in-memory api store instead, through the creation of a new service.
-- Use rxjs to load data, but use async pipe instead of manual subscribe / unsubscribe
-- Filter out the list of courses marked with expired: true
+Tips:
+
+- Use an Angular service that makes a GET request to 'api/favourites'. The in-memory service will automatically intercept the request and return the 'favourites' resource returned from the createDb() helper method.
+- Use async pipe in the template to subscribe to and display the rating instead of manual subscribe / unsubscribe
 - Add correct return types/generics
-- Use dependency injection to provide the in-memory api store
 
-3b. Add the ability for the user to favorite a course.
+3b. Add the ability for the user to add a favorite a course when clicking on the Favorite button.
+
+Tips:
 
 - When clicking on the favourite button, populate a list of favorites using an Angular service dedicated to this logic. The service should
 - Using [Angular material icons](https://fonts.google.com/icons) the heart material icon within the button. Ie. <i class="material-icons">favorite</i>
