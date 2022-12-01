@@ -27,7 +27,7 @@ Tips:
 
 - Use [Angular material icons](https://fonts.google.com/icons) the heart material icon. Ie. <i class="material-icons">favorite</i>
 - Use an Angular service that extends makes a GET request to 'api/favourites'. The in-memory service will automatically intercept the request and return the 'favourites' resource returned from the createDb() helper method. (More info on the in-memory-db service if you need it.)[https://blog.logrocket.com/angular-in-memory-web-api-tutorial-mocking-crud-apis-in-angular/]
-- Use async pipe in the template to subscribe to and display the rating instead of manual subscribe / unsubscribe
+- Use async pipe in the template to subscribe to and display the count instead of manual subscribe / unsubscribe
 - Add correct return types/generics
 
 3b. Add the ability for the user to add a favorite a course when clicking on the Favorite button. This should create a POST request to 'api/services' using the {id: number} model defined in the InMemoryService for the 'favourites' resource.
