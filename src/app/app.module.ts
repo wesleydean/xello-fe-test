@@ -7,10 +7,17 @@ import { InMemoryService } from './services/in-memory.service';
 import { LocaleService } from './services/locale.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, ProductListComponent, TopBarComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryService),
+  ],
   providers: [LocaleService, InMemoryService],
   bootstrap: [AppComponent],
 })
